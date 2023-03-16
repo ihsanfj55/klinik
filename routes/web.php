@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ExaminationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
-Route::get('/admin', function () {
+Route::resource('examination', ExaminationController::class);
+
+Route::get('/beranda_admin', function () {
     return view('admin.index');
-});
+})->name('dashboard');

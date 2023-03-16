@@ -1,7 +1,7 @@
 <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+      &copy; Copyright By  <strong><span>Klinik</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->
@@ -20,12 +20,13 @@
   <script src="{{ asset('template/admin') }}/vendor/chart.js/chart.umd.js"></script>
   <script src="{{ asset('template/admin') }}/vendor/echarts/echarts.min.js"></script>
   <script src="{{ asset('template/admin') }}/vendor/quill/quill.min.js"></script>
-  <script src="{{ asset('template/admin') }}/vendor/simple-datatables/simple-datatables.js"></script>
   <script src="{{ asset('template/admin') }}/vendor/tinymce/tinymce.min.js"></script>
   <script src="{{ asset('template/admin') }}/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
   <script src="{{ asset('template/admin') }}/js/main.js"></script>
+
+  @stack('js')
 
 </body>
 
