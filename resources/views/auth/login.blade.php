@@ -12,15 +12,15 @@
 <body>
 
     <div class="container" id="container">
-
         <div class="form-container sign-in-container">
-            <form action="#">
+            <form action="{{ route('login') }}" method="POST">
+                @csrf
                 <h1>Sign in</h1>
                 <br>
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
+                <input type="email" placeholder="Email" name="email" />
+                <input type="password" placeholder="Password" name="password" />
                 <br>
-                <button>Sign In</button>
+                <button type="submit">Sign In</button>
             </form>
         </div>
         <div class="overlay-container">
