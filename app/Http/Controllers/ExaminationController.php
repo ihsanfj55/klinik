@@ -17,6 +17,9 @@ class ExaminationController extends Controller
             $examination = Examination::latest()->get();
             return datatables()->of($examination)
                 ->addIndexColumn()
+                ->addColumn('created_at', function ($row) {
+                    return $row->created_at ? $row->created_at->isoFormat('D MMMM Y') : '';
+                })
                 ->addColumn('action', 'admin.examinations.include.action')
                 ->toJson();
         }
@@ -48,7 +51,7 @@ class ExaminationController extends Controller
      */
     public function show(Examination $examination)
     {
-        //
+        return view('admin.examinations.show', compact('examination'));
     }
 
     /**
@@ -77,9 +80,8 @@ class ExaminationController extends Controller
     {
         if ($examination) {
             $examination->delete();
+
             return redirect()->route('examination.index');
-        } else {
-            var_dump('tes');
         }
     }
 }
