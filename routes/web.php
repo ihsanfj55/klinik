@@ -15,11 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return redirect('/login');
 });
 
-Route::resource('examination', ExaminationController::class);
+Route::middleware('auth')->group(function () {
+    Route::resource('examination', ExaminationController::class);
 
-Route::get('/beranda_admin', function () {
-    return view('admin.index');
-})->name('dashboard');
+    Route::get('/beranda_admin', function () {
+        return view('admin.index');
+    })->name('dashboard');
+});
