@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('examinations', function (Blueprint $table) {
             $table->id();
+            $table->date('examination_date');
+            $table->enum('gender', ['Laki-Laki', 'Perempuan']);
             $table->string('fullname');
             $table->string('age');
             $table->string('village');

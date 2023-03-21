@@ -9,5 +9,5 @@ class Examination extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['fullname', 'age', 'village', 'subdistrict', 'regency', 'anamnese', 'checkup_result', 'therapy', 'action', 'visit_to', 'queue_number', 'examiner'];
+    protected $fillable = ['examination_date', 'gender', 'fullname', 'age', 'village', 'subdistrict', 'regency', 'anamnese', 'checkup_result', 'therapy', 'action', 'visit_to', 'queue_number', 'examiner'];
 }

@@ -22,6 +22,8 @@ class StoreExaminationRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'examination_date' => 'required|date',
+            'gender' => 'required|in:Laki-Laki,Perempuan',
             'fullname' => 'required|string|min:3|max:255',
             'age' => 'required|string|min:3|max:255',
             'village' => 'required|string|min:3|max:255',
@@ -40,6 +42,10 @@ class StoreExaminationRequest extends FormRequest
     public function messages()
     {
         return [
+            'examination_date.required' => 'Tanggal pemeriksaan wajib diisi',
+            'examination_date.date' => 'Tanggal pemeriksaan tidak sesuai format',
+            'gender.required' => 'Jenis kelamin wajib diisi',
+            'gender.in' => 'Jenis kelamin tidak terdaftar',
             'fullname.required' => 'Nama lengkap wajib diisi',
             'fullname.min' => 'Nama lengkap minimal 3 kata',
             'fullname.max' => 'Nama lengkap maksimal 255 kata',
