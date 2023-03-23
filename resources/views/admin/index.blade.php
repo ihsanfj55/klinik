@@ -1,5 +1,5 @@
 @extends('admin')
-@section('title', 'PMP - Beranda Admin')
+@section('title', 'PMP Care - Beranda Admin')
 @section('menuDashboard', 'nav-item')
 
 @section('content')

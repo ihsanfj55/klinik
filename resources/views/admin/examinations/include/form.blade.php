@@ -42,8 +42,12 @@
     <label for="gender" class="form-label">Jenis Kelamin</label>
     <select name="gender" class="form-control @error('gender') is-invalid @enderror">
         <option disabled selected>-- Pilih Jenis Kelamin --</option>
-        <option value="Laki-Laki" {{ isset($examination->gender) && $examination->gender == 'Laki-Laki' ? 'selected' : '' }}>Laki-Laki</option>
-        <option value="Perempuan" {{ isset($examination->gender) && $examination->gender == 'Perempuan' ? 'selected' : '' }}>Perempuan</option>
+        <option value="Laki-Laki"
+            {{ isset($examination->gender) && $examination->gender == 'Laki-Laki' ? 'selected' : '' }}>Laki-Laki
+        </option>
+        <option value="Perempuan"
+            {{ isset($examination->gender) && $examination->gender == 'Perempuan' ? 'selected' : '' }}>Perempuan
+        </option>
     </select>
     @error('gender')
         <div class="invalid-feedback">{{ $message }}</div>

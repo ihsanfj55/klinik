@@ -1,6 +1,6 @@
 @extends('admin')
 
-@section('title', 'PMP - Pemeriksaan Pasien')
+@section('title', 'PMP Care - Pemeriksaan Pasien')
 
 @section('content')
     <main id="main" class="main">
@@ -23,7 +23,7 @@
                             <a href="{{ route('examination.index') }}" type="button" class="btn btn-warning btn-md my-2">
                                 <i class="bi bi-arrow-left"></i> Kembali</a>
                             <a href="{{ route('examination.index') }}" type="button" class="btn btn-primary btn-md my-2">
-                                <i class="bi bi-printer"></i> Print</a>
+                                <i class="bi bi-printer"></i> Print Hasil Pemeriksaan</a>
                             <!-- Table with stripped rows -->
                             <table class="table">
                                 <tr>

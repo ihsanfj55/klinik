@@ -1,6 +1,6 @@
 @extends('admin')
 
-@section('title', 'PMP - Tambah Data Pemeriksaan Pasien')
+@section('title', 'PMP Care - Tambah Data Pemeriksaan Pasien')
 @section('content')
     <main id="main" class="main">
 

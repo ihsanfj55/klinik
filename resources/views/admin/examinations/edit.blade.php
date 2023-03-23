@@ -1,6 +1,6 @@
 @extends('admin')
 
-@section('title', 'PMP - Edit Data Pemeriksaan Pasien')
+@section('title', 'PMP Care - Edit Data Pemeriksaan Pasien')
 @section('content')
     <main id="main" class="main">
 
@@ -19,6 +19,8 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
+                            <a href="{{ route('examination.index') }}" type="button" class="btn btn-warning btn-md my-2">
+                                <i class="bi bi-arrow-left"></i> Kembali</a>
                             <h5 class="card-title">Edit Data Pemeriksaan Pasien</h5>
 
                             <!-- Multi Columns Form -->

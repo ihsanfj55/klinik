@@ -1,6 +1,6 @@
 @extends('admin')
 
-@section('title', 'PMP - Pemeriksaan Pasien')
+@section('title', 'PMP Care - Pemeriksaan Pasien')
 
 @push('css')
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
@@ -27,7 +27,8 @@
                             <h4 class="card-title">Data Pemeriksaan Pasien</h4>
                             <a href="{{ route('examination.create') }}" type="button" class="btn btn-success btn-md mb-2">
                                 <i class="bi bi-clipboard-plus"></i> Tambah Data</a>
-                            <a href="modal" type="button" class="btn btn-primary btn-md mb-2">
+                            <a href="modal" type="button" class="btn btn-primary btn-md mb-2" data-bs-toggle="modal"
+                                data-bs-target="#modalcetaklaporan">
                                 <i class="bi bi-clipboard-plus"></i> Print Laporan</a>
                             <!-- Table with stripped rows -->
                             <table class="table" id="data-table">
@@ -104,3 +105,41 @@
         });
     </script>
 @endpush
+
+<div class="modal fade" id="modalcetaklaporan" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Cetak Laporan</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="cetaklaporan" id="form" enctype="multipart/form-data">
+                <input type="hidden" id="tipe_cetak" name="tipe_cetak">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Plih tanggal awal : </label>
+                                <input type="date" name="tanggal_awal" id="tanggal_awal" class="form-control"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Plih tanggal Akhir : </label>
+                                <input type="date" name="tanggal_akhir" id="tanggal_akhir" class="form-control"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> --}}
+                    <button type="button" id="" class="btn btn-primary submit" onclick="report()"><i
+                            class="fas fa-print"></i>
+                        Cetak</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
