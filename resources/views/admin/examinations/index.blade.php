@@ -113,30 +113,25 @@
                 <h5 class="modal-title">Cetak Laporan</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="cetaklaporan" id="form" enctype="multipart/form-data">
-                <input type="hidden" id="tipe_cetak" name="tipe_cetak">
+            <form action="{{ route('allExamination') }}">
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Plih tanggal awal : </label>
-                                <input type="date" name="tanggal_awal" id="tanggal_awal" class="form-control"
-                                    required>
+                                <input type="date" name="start_date" class="form-control" required>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Plih tanggal Akhir : </label>
-                                <input type="date" name="tanggal_akhir" id="tanggal_akhir" class="form-control"
-                                    required>
+                                <input type="date" name="end_date" class="form-control" required>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> --}}
-                    <button type="button" id="" class="btn btn-primary submit" onclick="report()"><i
-                            class="fas fa-print"></i>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-print"></i>
                         Cetak</button>
                 </div>
             </form>

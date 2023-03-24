@@ -22,8 +22,10 @@
                         <div class="card-body">
                             <a href="{{ route('examination.index') }}" type="button" class="btn btn-warning btn-md my-2">
                                 <i class="bi bi-arrow-left"></i> Kembali</a>
-                            <a href="{{ route('examination.index') }}" type="button" class="btn btn-primary btn-md my-2">
-                                <i class="bi bi-printer"></i> Print Hasil Pemeriksaan</a>
+                            <form action="{{ route('byExaminationId', $examination->id) }}">
+                                <button type="submit" class="btn btn-primary btn-md my-2">
+                                    <i class="bi bi-printer"></i> Print Hasil Pemeriksaan</button>
+                            </form>
                             <!-- Table with stripped rows -->
                             <table class="table">
                                 <tr>

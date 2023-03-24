@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ExaminationController;
+use App\Http\Controllers\ReportController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,9 @@ Route::get('/', function () {
 
 Route::middleware('auth')->group(function () {
     Route::resource('examination', ExaminationController::class);
+
+    Route::get('/report', [ReportController::class, 'allExamination'])->name('allExamination');
+    Route::get('/report/{examination}', [ReportController::class, 'byExaminationId'])->name('byExaminationId');
 
     Route::get('/beranda_admin', [DashboardController::class, 'index'])->name('dashboard');
 });
