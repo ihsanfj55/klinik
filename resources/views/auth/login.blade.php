@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="{{ asset('template/admin') }}/img/favicon.png" />
+    <link rel="icon" type="image/png" href="{{ asset('template/admin') }}/img/favicon2.png" />
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('template/dashboard') }}/vendor/bootstrap/css/bootstrap.min.css">
     <!--===============================================================================================-->
@@ -41,9 +41,10 @@
             <div class="wrap-login100">
                 <form action="{{ route('login') }}" method="POST">
                     @csrf
+                    <div class="text-center">
+                        <img src="{{ asset('template/admin/img/logopmp.png') }}" alt="logo pmp" width="50%">
+                    </div>
                     <span class="login100-form-title p-b-26">
-                        PMP - Care
-                        <br>
                         Login
                     </span>
 
@@ -99,43 +100,3 @@
 </body>
 
 </html>
-
-{{-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PMP Care - Login</title>
-    <link href="{{ asset('template/dashboard') }}/style.css" rel="stylesheet">
-</head>
-
-<body>
-
-    <div class="container" id="container">
-        <div class="form-container sign-in-container">
-            <form action="{{ route('login') }}" method="POST">
-                @csrf
-                <h1>Selamat Datang kembali!</h1>
-                <br>
-                <input type="email" placeholder="Email" name="email" />
-                <input type="password" placeholder="Password" name="password" />
-                <br>
-                <button type="submit">Sign In</button>
-            </form>
-        </div>
-        <div class="overlay-container">
-            <div class="overlay">
-                <div class="overlay-panel overlay-right">
-                    <h1>PMP - Care</h1>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="{{ asset('template/dashboard') }}/main.js"></script>
-</body>
-
-</html> --}}

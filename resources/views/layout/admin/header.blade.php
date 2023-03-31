@@ -10,8 +10,8 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{ asset('template/admin') }}/img/favicon.png"rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="{{ asset('template/admin') }}/img/favicon2.png"rel="icon">
+    <link href="{{ asset('template/admin') }}/img/favicon2.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -48,7 +48,7 @@
 
         <div class="d-flex align-items-center justify-content-between">
             <a href="index.html" class="logo d-flex align-items-center">
-                <img src="{{ asset('template/admin') }}/img/logo.png" alt="">
+                <img src="{{ asset('template/admin') }}/img/favicon2.png" alt="">
                 <span class="d-none d-lg-block">PMP-Care</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>

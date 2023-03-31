@@ -121,7 +121,7 @@
                 <td>{{ $examination->subdistrict }}</td>
             </tr>
             <tr>
-                <td>5</td>
+                <td>6</td>
                 <td>Kabupaten</td>
                 <td>{{ $examination->regency }}</td>
             </tr>
