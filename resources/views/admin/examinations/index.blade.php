@@ -38,6 +38,8 @@
                                         <th scope="col">Tanggal Pemeriksaan</th>
                                         <th scope="col">Nama Lengkap</th>
                                         <th scope="col">Umur</th>
+                                        <th scope="col">Desa</th>
+                                        <th scope="col">Kecamatan</th>
                                         <th scope="col">Kunjungan Ke</th>
                                         <th scope="col">Nomor Antrian</th>
                                         <th scope="col">Opsi</th>
@@ -87,6 +89,12 @@
                     },
                     {
                         data: 'age'
+                    },
+                    {
+                        data: 'village'
+                    },
+                    {
+                        data: 'subdistrict'
                     },
                     {
                         data: 'visit_to'
