@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\ExaminationExport;
 use App\Models\Examination;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
@@ -12,10 +13,8 @@ class ReportController extends Controller
     {
         $startDate = $request->start_date;
         $endDate = $request->end_date;
-        $examinations = Examination::whereBetween('examination_date', [$startDate, $endDate])->orderBy('examination_date', 'DESC')->get();
 
-        $pdf = Pdf::loadView('admin.examinations.report.all', compact('examinations', 'startDate', 'endDate'))->setPaper('A4', 'portrait');
-        return $pdf->stream('laporan-pemeriksaan' . $startDate . '-' . $endDate . '.pdf');
+        return (new ExaminationExport($startDate, $endDate))->download('laporan-pemeriksaan' . $startDate . '-' . $endDate . '.xlsx');
     }
 
     public function byExaminationId(Examination $examination)
