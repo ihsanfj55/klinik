@@ -25,6 +25,14 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/report', [ReportController::class, 'allExamination'])->name('allExamination');
     Route::get('/report/{examination}', [ReportController::class, 'byExaminationId'])->name('byExaminationId');
+    Route::get('/report_day', [ReportController::class, 'reportExaminationDay'])->name('reportExaminationDay');
+    Route::get('/report_month', [ReportController::class, 'reportExaminationMonth'])->name('reportExaminationMonth');
+    Route::get('/report_all', [ReportController::class, 'reportAllExamination'])->name('reportAllExamination');
 
     Route::get('/beranda_admin', [DashboardController::class, 'index'])->name('dashboard');
+
+
+    Route::get('/kunjungan_harian', [DashboardController::class, 'visitDay'])->name('visitDay');
+    Route::get('/kunjungan_bulanan', [DashboardController::class, 'visitMonth'])->name('visitMonth');
+    Route::get('/total_kunjungan', [DashboardController::class, 'allVisit'])->name('allVisit');
 });

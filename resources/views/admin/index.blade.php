@@ -17,60 +17,85 @@
         </div><!-- End Page Title -->
 
         <section class="section dashboard">
-          <div class="row">
+            <div class="row">
 
-        <!-- Left side columns -->
-        <div class="col-lg-8">
-          <div class="row">
+                <!-- Left side columns -->
+                <div class="col-lg-8">
+                    <div class="row">
 
 
-        <!-- Kunjungan Harian Card -->
-            <div class="col-xxl-6 col-md-6">
+                        <!-- Kunjungan Harian Card -->
+                        <div class="col-xxl-4 col-md-4">
 
-              <div class="card info-card customers-card">
+                            <div class="card info-card customers-card">
 
-                <div class="card-body">
-                  <h5 class="card-title">Kunjungan Hari Ini</h5>
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="{{ route('visitDay') }}">Kunjungan Hari Ini </a></h5>
 
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-people"></i>
+                                    <div class="d-flex align-items-center">
+                                        <div
+                                            class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                            <i class="bi bi-people"></i>
+                                        </div>
+                                        <div class="ps-3">
+                                            <h6>{{ $totalExaminationByDay }}</h6>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- End Customers Card -->
+                        <!-- Kunjungan Bulanan Card -->
+                        <div class="col-xxl-4 col-md-4">
+
+                            <div class="card info-card customers-card">
+
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="{{ route('visitMonth') }}">Kunjungan Bulan Ini </a></h5>
+
+                                    <div class="d-flex align-items-center">
+                                        <div
+                                            class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                            <i class="bi bi-people"></i>
+                                        </div>
+                                        <div class="ps-3">
+                                            <h6>{{ $totalExaminationByMonth }}</h6>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- End Customers Card -->
+                        <!-- Kunjungan Bulanan Card -->
+                        <div class="col-xxl-4 col-md-4">
+
+                            <div class="card info-card customers-card">
+
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="{{ route('allVisit') }}">Total Kunjungan</a></h5>
+
+                                    <div class="d-flex align-items-center">
+                                        <div
+                                            class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                            <i class="bi bi-people"></i>
+                                        </div>
+                                        <div class="ps-3">
+                                            <h6>{{ $totalAllExamination }}</h6>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- End Customers Card -->
                     </div>
-                    <div class="ps-3">
-                      <h6>{{ $totalExaminationByDay }}</h6>
-                    </div>
-                  </div>
-
                 </div>
-              </div>
-
             </div>
-        <!-- End Customers Card -->
-         <!-- Kunjungan Bulanan Card -->
-            <div class="col-xxl-6 col-md-6">
-
-              <div class="card info-card customers-card">
-
-                <div class="card-body">
-                  <h5 class="card-title">Kunjungan Bulan Ini</h5>
-
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-people"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6>{{ $totalExaminationByMonth }}</h6>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-            </div>
-        <!-- End Customers Card -->
-         </div>
-        </div>
-          </div>
         </section>
 
     </main>
